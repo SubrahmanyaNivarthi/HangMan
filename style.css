@@ -1,0 +1,125 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 30px 15px;
+  margin: 0;
+  transform: scale(0.85);
+  transform-origin: top center;
+}
+
+/* Word display */
+#wordDisplay {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  margin: 20px 0;
+  word-wrap: break-word;
+  color: #ffffff;
+}
+
+/* Hint */
+#hintBox {
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #aaaaaa;
+}
+
+/* Keyboard container box */
+#keyboardContainer {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+/* Keyboard buttons */
+#keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+#keyboard button {
+  margin: 5px;
+  padding: 10px 14px;
+  font-size: 16px;
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#keyboard button:hover {
+  background-color: #444;
+}
+
+#keyboard button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Message */
+#message {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ff6961;
+}
+
+/* Wrong guesses & attempts */
+#wrongLetters {
+  color: #f06292;
+}
+
+#attempts {
+  color: #81c784;
+  font-weight: bold;
+}
+
+/* Restart button */
+button[onclick="startGame()"] {
+  margin-top: 15px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[onclick="startGame()"]:hover {
+  background-color: #43a047;
+}
+
+/* Canvas */
+#hangmanCanvas {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  #wordDisplay {
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+  }
+
+  #keyboard button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  #keyboardContainer {
+    padding: 8px;
+  }
+}
